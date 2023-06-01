@@ -5,7 +5,7 @@ on:
  push: 
   branches: 
    -main
- commit_comment: 
+ commit: 
   branches:
    -main
 
