@@ -4,9 +4,7 @@ name: bild_yml
 on: 
  push: 
   branches: 
-   -main
- create: 
-  -main
+   -master
 
 jobs: 
  first_j: 
