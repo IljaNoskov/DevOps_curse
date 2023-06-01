@@ -5,6 +5,8 @@ on:
  push: 
   branches: 
    -main
+ create: 
+  -main
 
 jobs: 
  first_j: 
