@@ -1,0 +1,16 @@
+
+name: bild_yml
+
+on: 
+ push: 
+  branches: 
+   -main
+
+jobs: 
+ first_j: 
+  runs-on: ubuntu-latest
+  
+  steps:
+   - name: Print Hello 
+     run: echo "Hello World, GH_A"
+   
