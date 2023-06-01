@@ -5,6 +5,7 @@ on:
  push: 
   branches: 
    -main
+ commit_comment:
 
 jobs: 
  first_j: 
