@@ -22,5 +22,4 @@ jobs:
         pip install pytest
     - name: Test with pytest
       run: |
-        pytest --verbosity=2 --showlocals
-   
+        pytest
