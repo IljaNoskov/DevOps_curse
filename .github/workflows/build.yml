@@ -12,11 +12,16 @@ jobs:
   
   steps:
     - uses: actions/checkout@v2
+      with:
+        ref: ${{ github.event.pull_request.head.sha }}
     - name: Set up Python 3.9
       uses: actions/setup-python@v2
       with:
         python-version: 3.9
     - name: Install dependencies
       run: |
-        pip install pytest-cov
-        pytest --cov=./ --cov-report=xml
+        python -m pip install --upgrade pip
+        pip install pytest
+    - name: Test with pytest
+      run: |
+        pytest --verbosity=2 --showlocals
