@@ -1,10 +1,10 @@
 
 name: bild_yml
 
-on: 
- push: 
-  branches: 
-   - master
+on:
+  push:
+    branches:
+      - master
 
 jobs: 
  first_j: 
