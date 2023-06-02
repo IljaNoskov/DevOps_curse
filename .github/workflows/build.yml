@@ -1,5 +1,9 @@
 
 name: bild_yml
+env:
+  file_name: artifact_body.txt
+  path: ./
+  artifact_name: artifact_1
 
 on:
   push:
