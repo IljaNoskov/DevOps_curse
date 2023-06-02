@@ -37,10 +37,10 @@ jobs:
   
   steps:
    - name: Create artifact data
-     run: echo "All tests are sucsess" > ${{ env.path }}${{ env.file_name }}
+     run: echo "All tests are sucsess" > ${{ env.path }}${{ env.artifact_body.txt }}
    - name: Save Artifact
      uses: actions/upload-artifact@v3
      with:
       name: ${{ env.artifact_name }}
-      path: ${{ env.path }}${{ env.file_name }}
+      path: ${{ env.path }}${{ env.artifact_body.txt }}
   
