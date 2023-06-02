@@ -25,3 +25,18 @@ jobs:
     - name: Test with pytest
       run: |
         pytest --verbosity=2 --showlocals
+        
+ second_j:
+  name: send_art
+  needs: first_j
+  runs-on: ubuntu-latest
+  
+  steps:
+   - name: Create artifact data
+     run: echo "All tests are sucsess" > ${{ env.path }}${{ env.file_name }}
+   - name: Save Artifact
+     uses: actions/upload-artifact@v3
+     with:
+      name: ${{ env.artifact_name }}
+      path: ${{ env.path }}${{ env.file_name }}
+  
